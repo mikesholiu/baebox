@@ -140,11 +140,10 @@ header {
             .likes {
                 position: absolute;
                 bottom: 5px;
-                left: 15px;
+                left: 5px;
                 padding: $padding/2;
-                background: $black;
-                background: rgba($black, 0.4);
-                color: $white;
+                background: $backgroundgrey;
+                color: $black;
             }
         }
         .description {
@@ -158,6 +157,7 @@ header {
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
+            text-align: center;
         }
     }
  
