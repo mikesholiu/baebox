@@ -1,0 +1,93 @@
+/*
+* Custom variables
+*/
+$main-font: 'Lato', sans-serif;
+$sub-font: 'Montserrat', sans-serif;
+$fancy-font: 'Satisfy';
+$font-size: 16px;
+ 
+$black: #000;
+$white: #FFF;
+$grey: #585c65;
+$backgroundgrey: #F5F5F5;
+$mediumgrey: #9b9b9b;
+$lightgrey: #eeeeee;
+ 
+$padding: 10px;
+$margin: 10px;
+ 
+/*
+* Override Bootstrap variables
+*/
+$font-family-sans-serif: $main-font;
+ 
+@import 'bootstrap';
+
+body {
+    background-color: $lightgrey;
+}
+
+.navbar-default .navbar-brand{
+    font: $fancy-font;
+    text-transform: uppercase;
+}
+
+.navbar{
+    -webkit-box-shadow: 0 2px 10px -6px #999;
+    -moz-box-shadow: 0 2px 10px -6px #999;
+    box-shadow: 0 2px 10px -6px #999;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+ 
+.instagram-wrap {
+    background: $lightgrey;
+    padding-top: $padding*3
+}
+ 
+.instagram-content {
+    h3 {
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        font-size: 15px;
+        font-weight: 700;
+        text-align: center;
+        padding: $padding*3 0;
+        color: darken($lightgrey, 20%);
+    }
+    .photo-box {
+        margin: 0 0 $margin*3 0;
+ 
+        .image-wrap {
+            img {
+                width: 100%;
+            }
+ 
+            .likes {
+                position: absolute;
+                bottom: 115px;
+                left: 25px;
+                padding: $padding/2;
+                background: $backgroundgrey;
+                color: $black;
+            }
+        }
+        .description {
+            font-family: $sub-font;
+            font-size: 12px;
+            background: $white;
+            color: $mediumgrey;
+            letter-spacing: 1px;
+            padding: $padding*1.5;
+            height: 75px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            text-align: center;
+        }
+    }
+ 
+}
+.fancy-font {
+    font-family: $fancy-font;
+}
