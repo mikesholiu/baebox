@@ -30,6 +30,20 @@ body {
 .navbar-default .navbar-brand{
     font: $fancy-font;
     text-transform: uppercase;
+    position: absolute;
+    left: 47%;
+}
+
+.title-xs{
+    font: $fancy-font;
+    text-transform: uppercase;
+    position: absolute;
+    padding: 15px;
+    line-height: 20px;
+    height: 50px;
+    color: #777;
+    font-size: 25px;
+    bottom: 0px;
 }
 
 .navbar{
@@ -39,10 +53,17 @@ body {
     background-color: rgba(255, 255, 255, 0.95);
 }
 
+.welcome-text{
+    font-size: 30px;
+    text-align: center;
+    padding: $padding*3;
+    margin-top: 100px;
+    color: darken($lightgrey, 70%);
+}
  
 .instagram-wrap {
     background: $lightgrey;
-    padding-top: $padding*3
+    padding-top: $padding*2
 }
  
 .instagram-content {
