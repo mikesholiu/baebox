@@ -57,12 +57,12 @@ body {
     }
     .photo-box {
         margin: 0 0 $margin*3 0;
- 
-        .image-wrap {
-            img {
-                width: 100%;
+        
+            .image-wrap {
+                img{
+                    width: 100%;
+                }
             }
- 
             .likes {
                 position: absolute;
                 bottom: 115px;
@@ -71,7 +71,8 @@ body {
                 background: $backgroundgrey;
                 color: $black;
             }
-        }
+
+        
         .description {
             font-family: $sub-font;
             font-size: 12px;

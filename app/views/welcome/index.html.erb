@@ -6,6 +6,8 @@
     <link href='http://fonts.googleapis.com/css?family=Lato:400,700|Satisfy|Montserrat' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script type="text/javascript" src="js/modernizr.js"></script>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
 <body>
 
@@ -48,29 +50,25 @@
             <div class="col-xs-12">
                 <div class="instagram-content">
                     <h3>Featured Items</h3>
-                    <div class="row photos-wrap">
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                        <div class="photo-box">
-                            <div class="image-wrap">
-                                <img src="jewelry.jpg">
-                                <div class="likes">300 Likes</div>
-                            </div>
-                            <div class="description">
-                                Veritas Anchor Chain
-                                <div class="price">$200</div>
-                            </div>
-                        </div>
-
-                    </div>
-                        </div>
+                    <div class="row">
+                    <% @recent.each do |recent| %>
+                      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                          <div class = "photo-box">
+                            <div class = "image-wrap">
+                              <%= image_tag recent.images.first.last.url %>
+                              </div>
+                              <div class="description">Product Description
+                                <div class="price">$100</div>
+                              </div>
+                          </div>
+                      </div>
+                      <%end %>
+                  </div>
                 </div>
             </div>
         </div>
     </div>
     </section>
-
-
-
 
     <footer>
  
