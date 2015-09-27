@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   root 'welcome#index'
   match 'auth/:provider/callback', to: 'sessions#create',:via => [:get, :post]
   match 'signout', to: 'sessions#destroy', as: 'signout',:via => [:get]
+  #match 'auth/failure', to: redirect('/')
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
