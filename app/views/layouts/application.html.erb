@@ -42,9 +42,8 @@
             <li><a>Hello <%= current_user.name %></a></li>
             <li><%= link_to "Sign out", signout_path %></li>
           <% else %>
-            <li><%= link_to "Sign in", "/auth/instagram" %></li>
+            <li><%= link_to "Log in with Instagram", "/auth/instagram" %></li>
             <% end %>
-          <li class="active"><a href="./">Join <span class="sr-only">(current)</span></a></li>
         </ul>
       </div>
     </div>
