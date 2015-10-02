@@ -6,7 +6,10 @@ Rails.application.routes.draw do
   match 'signout', to: 'sessions#destroy', as: 'signout',:via => [:get]
   
   get 'welcome/admin' => 'welcome#admin'
+
+  get 'products/index' => 'products#index'
   
+  resources :products
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
