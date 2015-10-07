@@ -1,7 +1,42 @@
-  <section class ="welcome-text">
-    <div class = "container">
-      <div class = "row">
-          Products
-      </div>
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+
+    <section class="instagram-wrap">
+      <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="instagram-content">
+                    <h3>Available Products</h3>
+                    <div class="row">
+                    <% @products.each do |product| %>
+                      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                          <div class = "photo-box">
+                            <div class = "image-wrap">
+                              <%= image_tag(product.image) %>
+                              </div>
+                              <div class="description"><%= product.description %>
+                                <div class="price"><%= product.price %></div>
+                                <div><%= check_box_tag :featured, 1, product.featured %> </div>
+                              </div>
+                          </div>
+                      </div>
+                      <%end %>
+                  </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </section>
+    </section>
+
+    <footer>
+    </footer>
+    <section class="footer-bottom">
+   
+    </section>
+ 
+</body>
+</html>

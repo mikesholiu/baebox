@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'welcome/admin' => 'welcome#admin'
 
   get 'products/index' => 'products#index'
+  get 'products/new' => 'products#new'
   
   resources :products
   # The priority is based upon order of creation: first created -> highest priority.
