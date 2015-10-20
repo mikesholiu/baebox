@@ -5,7 +5,15 @@ class User < ActiveRecord::Base
       user.provider = auth.provider 
       user.uid      = auth.uid
       user.name     = auth.info.name
+
+      if user.uid == ENV["admin_uid"]
+        user.admin = true
+      else
+        user.admin = false
+      end
+
       user.save
+
     end
   end
   
