@@ -18,11 +18,13 @@
                           <div class = "image-wrap">
                             <%= image_tag(product.image) %>
                           </div>
-                          <div class="description">Description: <%= best_in_place product, :description %>
+                          <div class="admin description">Handle: @<%= best_in_place product, :handle %>
+                          <div class = "price">Description: <%= best_in_place product, :description %>
                           <div class="price"> Image Link: <%=  best_in_place product, :image, :display_with => :truncate, :helper_options => { :length => 20 } %>
                           <div class="price">Price: <%= best_in_place product, :price %></div>
                               <div>Feature?: <%= best_in_place product, :featured, as: :checkbox, collection: {false: "No", true: "Yes"} %> </div>
                             </div>
+                        </div>
                         </div>
                         </div>
                     </div>

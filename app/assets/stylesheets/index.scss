@@ -101,12 +101,17 @@ body {
             color: $mediumgrey;
             letter-spacing: 1px;
             padding: $padding*1.5;
-            height: 100px;
+            height: 80px;
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
             text-align: center;
         }
+
+        .admin {
+            height: 120px !important;
+        }
+
     }
  
 }
