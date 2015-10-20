@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  #before_filter :authorize_admin, only: :index
   respond_to :html, :json
   def index
     @products = Product.all
