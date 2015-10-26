@@ -27,6 +27,12 @@ body {
     background-color: $lightgrey;
 }
 
+a{ color: $grey;}
+a:visited { text-decoration: none; color:$grey; }
+a:hover { text-decoration: none; color:$grey; }
+a:focus { text-decoration: none; color:$grey; }
+a:hover, a:active { text-decoration: none; color:$grey }
+
 .navbar-default .navbar-brand{
     font: $fancy-font;
     text-transform: uppercase;
@@ -81,6 +87,7 @@ body {
         padding: $padding*3 0;
         color: darken($lightgrey, 20%);
     }
+
     .photo-box {
         margin: 0 0 $margin*3 0;
         
@@ -88,6 +95,8 @@ body {
                 img{
                     width: 100%;
                 }
+                position: relative;
+
             }
             .likes {
                 position: absolute;
@@ -116,6 +125,45 @@ body {
         .admin {
             height: 120px !important;
         }
+
+    .fade {
+       opacity: 1;
+       transition: opacity .25s ease-in-out;
+       -moz-transition: opacity .25s ease-in-out;
+       -webkit-transition: opacity .25s ease-in-out;
+       }
+
+    .fade:hover{
+        opacity: 0.25;
+    }
+
+    .likebutton{
+        position: absolute;
+        visibility: visible;
+        margin: 10px;
+        opacity: 0;
+        font-size: 40px;
+        z-index: 1;
+        top: 0;
+    }
+
+   .fade:hover + .likebutton {
+      opacity: 1;
+      transition: opacity .25s ease-in-out;
+      -moz-transition: opacity .25s ease-in-out;
+      -webkit-transition: opacity .25s ease-in-out;
+    }
+
+    .likebutton:hover{
+        opacity: 0.5;
+    }
+
+    .likebutton-fade{
+       opacity: 0;
+       transition: opacity .25s ease-in-out;
+       -moz-transition: opacity .25s ease-in-out;
+       -webkit-transition: opacity .25s ease-in-out;
+    }
 
     }
  
