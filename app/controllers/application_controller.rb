@@ -17,8 +17,8 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user
 
-  # def authorize_admin
-  #   redirect_to :back, :status => 401 unless current_user.admin
-  # end
+  def authorize_admin
+    redirect_to root_path, :status => 401 unless current_user.admin
+  end
   
 end

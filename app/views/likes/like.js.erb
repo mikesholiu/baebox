@@ -1,1 +1,2 @@
-$('div#<%= dom_id(@product) %>').html('<%= j render partial: "likebutton", locals: {product: @product} %>');
+$('#likebutton').html('<%= escape_javascript render: 
+  "likebutton", locals: {product: @product} %>');

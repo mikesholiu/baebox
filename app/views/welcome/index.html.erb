@@ -32,9 +32,9 @@
 
                                 </div>
                               <div class="description"><%= feature.description %>
-                                <div class="price">$<%= feature.price %></div>
+                                <div class="price"><%= number_to_currency(feature.price, :precision => 0)%></div>
                                 <div class="price">By @<%= link_to feature.handle, "http://instagram.com/#{feature.handle}/", :target => '_blank'%> </div>
-                                
+
                               </div>
                           </div>
                       </div>
