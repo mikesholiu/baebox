@@ -1,0 +1,12 @@
+<% if current_user %>
+  <% if current_user.like?(product) %>
+    <%= button_to "Unlike", unlike_path(product_id: product.id), remote: true, method: :delete %>
+  <% else %>
+    <%= button_to "Like", like_path(product_id: product.id), remote: true %>
+  <% end %>
+
+<% else %>
+  
+<% end %>
+
+<!-- <i class="fa fa-heart"></i> -->

@@ -26,10 +26,15 @@
                             <div class = "image-wrap fade">
                               <%= image_tag feature.image %>
                               </div>
-                                <div class = "likebutton likebutton-fade"><a href="http://google.com" target='_blank' ><i class="fa fa-heart"></i></a></div>
+                                <div class = "likebutton likebutton-fade">
+
+                                <%= render partial: "likes/likebutton", locals: { product: feature} %>
+
+                                </div>
                               <div class="description"><%= feature.description %>
                                 <div class="price">$<%= feature.price %></div>
                                 <div class="price">By @<%= link_to feature.handle, "http://instagram.com/#{feature.handle}/", :target => '_blank'%> </div>
+                                
                               </div>
                           </div>
                       </div>

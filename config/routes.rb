@@ -10,6 +10,10 @@ Rails.application.routes.draw do
   get 'products/index' => 'products#index'
   get 'products/new' => 'products#new'
   
+  match 'like', to: 'likes#like', via: :post
+  match 'unlike', to: 'likes#unlike', via: :delete
+
+
   resources :products
 
 end
