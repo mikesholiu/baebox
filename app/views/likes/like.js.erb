@@ -1,12 +1,17 @@
-// Step 1: Find the button
-// console.log('rendering javascript action, product', $);
-var btn = $("input.like-action[data-product-id='" + <%= @product.id %> + "']");
-// Step 2: Change the button's class (and text)
 
-btn.val('Unlike');
+// var btn = $("input.like-action[data-product-id='" + <%= @product.id %> + "']");
+
+// btn.val('Unlike');
+// btn.removeClass('like-action');
+// btn.addClass('unlike-action');
+// var parent = btn.parent('form');
+// parent.attr('action', '/unlike?product_id=' + <%= @product.id %>);
+
+var btn = $(".like-action[data-product-id='" + <%= @product.id %> + "']");
+btn.attr('href', '/unlike?product_id=' + <%= @product.id %>);
 btn.removeClass('like-action');
 btn.addClass('unlike-action');
-var parent = btn.parent('form');
-parent.attr('action', '/unlike?product_id=' + <%= @product.id %>);
- //there's also a .toggleClass method
 
+// Now update like-count
+var likeCount = $(".like-quantity[data-product-id='" + <%= @product.id %> + "']");
+likeCount.html('<%= @product.likes.count %>');

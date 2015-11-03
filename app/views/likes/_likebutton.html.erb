@@ -1,5 +1,20 @@
 <% if current_user %>
   <% if current_user.like?(product) %>
+    <%= link_to unlike_path(product_id: product.id), remote: true, class: "unlike-action", "data-product-id": product.id, :method => :post do %><i class="fa fa-heart fa-1"></i><%end%>
+  <% else %>
+    <%= link_to like_path(product_id: product.id), remote: true, class: "like-action", "data-product-id": product.id,  :method => :post do %><i class="fa fa-heart fa-1"></i><% end %>
+  <% end %>
+
+<% else %>
+  
+<% end %>
+
+
+
+<!-- <i class="fa fa-heart"></i> -->
+<!--
+<% if current_user %>
+  <% if current_user.like?(product) %>
     <%= button_to "Unlike", unlike_path(product_id: product.id), remote: true, class: "unlike-action", "data-product-id": product.id %>
   <% else %>
     <%= button_to "Like", like_path(product_id: product.id), remote: true, class: "like-action", "data-product-id": product.id %>
@@ -8,5 +23,4 @@
 <% else %>
   
 <% end %>
-
-<!-- <i class="fa fa-heart"></i> -->
+-->

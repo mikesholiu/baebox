@@ -3,7 +3,6 @@ class LikesController < ApplicationController
 respond_to :js, :html
 
   def like
-
     @user = current_user
     @product = Product.find(params[:product_id])
     @user.like!(@product)

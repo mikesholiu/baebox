@@ -6,4 +6,12 @@
   padding: 100px;
 }
 
+.img-container {
+  border: dashed blue 1px;
+  height: 500px;
+}
 
+.img-container product-image {
+  max-height: 100%;
+  max-width: 100%;
+}

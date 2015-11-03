@@ -25,13 +25,18 @@
                           <div class = "photo-box">
                             <div class = "fade-wrap">
                               <div class = "image-wrap">
-                                <%= image_tag feature.image %>
+                                <%= link_to image_tag(feature.image), {controller: "products", action: "show", id: feature.id} %>
+                              </div>  
+                              
+                              <div class = "likebutton likebutton-fade">
+                              <%= render partial: "likes/likebutton", locals: { product: feature } %>
                               </div>
-                                <div class = "likebutton likebutton-fade">
-                                <%= render partial: "likes/likebutton", locals: { product: feature } %>
-                                </div>
-                            
-                                </div>
+                              
+                              <div class = "like-quantity" data-product-id = "<%= feature.id %>">
+                               <%= feature.likes.count %>
+                              </div>
+
+                            </div>
 
                                 <div class="description"><%= feature.description %>
                                   <div class="price"><%= number_to_currency(feature.price, :precision => 0)%></div>

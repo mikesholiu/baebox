@@ -4,10 +4,25 @@
 
 
 .like-action {
-  background-color: red;
+  font-size: 20pt;
+  color: grey;
 }
 
 .unlike-action {
+  font-size: 20pt;
+  color: black;
+}
 
-  background-color: green;
+.likebutton {
+  a.like-action {
+    &:hover {
+      color: red;
+    }
+  }
+  a.unlike-action {
+    &:hover {
+      color: green;
+    }
+  }
+
 }
