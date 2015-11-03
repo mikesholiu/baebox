@@ -1,2 +1,12 @@
-$('#likebutton').html('<%= escape_javascript render: 
-  "likebutton", locals: {product: @product} %>');
+// Step 1: Find the button
+// console.log('rendering javascript action, product', $);
+var btn = $("input.like-action[data-product-id='" + <%= @product.id %> + "']");
+// Step 2: Change the button's class (and text)
+
+btn.val('Unlike');
+btn.removeClass('like-action');
+btn.addClass('unlike-action');
+var parent = btn.parent('form');
+parent.attr('action', '/unlike?product_id=' + <%= @product.id %>);
+ //there's also a .toggleClass method
+
