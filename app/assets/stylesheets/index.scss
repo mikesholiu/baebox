@@ -90,7 +90,11 @@ a:hover, a:active { text-decoration: none; color:$grey }
 
     .photo-box {
         margin: 0 0 $margin*3 0;
-        
+            
+            .fade-wrap{
+
+            }
+
             .image-wrap {
                 img{
                     width: 100%;
@@ -126,14 +130,14 @@ a:hover, a:active { text-decoration: none; color:$grey }
             height: 120px !important;
         }
 
-    .fade {
+    .fade-wrap {
        opacity: 1;
        transition: opacity .25s ease-in-out;
        -moz-transition: opacity .25s ease-in-out;
        -webkit-transition: opacity .25s ease-in-out;
        }
 
-    .fade:hover{
+    .fade-wrap:hover > .image-wrap{
         opacity: 0.25;
     }
 
@@ -143,19 +147,20 @@ a:hover, a:active { text-decoration: none; color:$grey }
         margin: 10px;
         opacity: 0;
         font-size: 40px;
-        z-index: 1;
         top: 0;
+        z-index: 1;
     }
 
-   .fade:hover + .likebutton {
+   .image-wrap:hover + .likebutton {
       opacity: 1;
       transition: opacity .25s ease-in-out;
       -moz-transition: opacity .25s ease-in-out;
       -webkit-transition: opacity .25s ease-in-out;
+    
     }
 
     .likebutton:hover{
-        opacity: 0.5;
+        opacity: 1;
     }
 
     .likebutton-fade{
