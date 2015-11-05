@@ -3,26 +3,30 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.like-action {
+.unliked {
   font-size: 20pt;
-  color: grey;
+  color: #a8a8a8;
+  &:hover{
+    color: #a8a8a8;
+  }
+  &:focus{
+    color: #a8a8a8;
+    &:hover{
+    color: #a8a8a8;
+    }
+  }
 }
 
-.unlike-action {
+.liked {
   font-size: 20pt;
   color: black;
-}
-
-.likebutton {
-  a.like-action {
-    &:hover {
-      color: red;
+  &:hover{
+    color: black;
+  }
+  &:focus{
+    color: black;
+    &:hover{
+      color: black;
     }
   }
-  a.unlike-action {
-    &:hover {
-      color: green;
-    }
-  }
-
 }

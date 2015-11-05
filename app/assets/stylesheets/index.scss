@@ -37,7 +37,16 @@ a:hover, a:active { text-decoration: none; color:$grey }
     font: $fancy-font;
     text-transform: uppercase;
     position: absolute;
-    left: 47.5%;
+    text-align: center;
+}
+
+.navbar-collapse.collapse{
+    width: 100%;
+}
+
+.navbar-brand.hidden-xs {
+    width: 50%;
+    margin: 0;
 }
 
 .navbar-brand-xs{
@@ -90,7 +99,7 @@ a:hover, a:active { text-decoration: none; color:$grey }
 
     .photo-box {
         margin: 0 0 $margin*3 0;
-            
+              box-shadow: 2px 2px 4px -1px rgba(199,199,199,0.78);
             .fade-wrap{
 
             }
@@ -132,19 +141,32 @@ a:hover, a:active { text-decoration: none; color:$grey }
 
     .fade-wrap {
        opacity: 1;
-       transition: opacity .25s ease-in-out;
-       -moz-transition: opacity .25s ease-in-out;
-       -webkit-transition: opacity .25s ease-in-out;
+
 
             .like-quantity{
-                position: absolute;
-                font-color: grey;
+                position: relative;
+                color: grey;
+                height: 0;
+                bottom: 25px;
+                left: 10px;
+                opacity: 0;
+                font-size: 10pt;
+                transition: opacity .40s ease-in-out;
             }
 
        }
 
+    .image-wrap{
+        transition: opacity .40s ease-in-out;
+    }
+
     .fade-wrap:hover > .image-wrap{
         opacity: 0.25;
+
+    }
+
+    .fade-wrap:hover > .like-quantity{
+        opacity: 1;
     }
 
     .likebutton{
@@ -160,21 +182,17 @@ a:hover, a:active { text-decoration: none; color:$grey }
    .image-wrap:hover + .likebutton {
       opacity: 1;
       transition: opacity .25s ease-in-out;
-      -moz-transition: opacity .25s ease-in-out;
-      -webkit-transition: opacity .25s ease-in-out;
-    
     }
 
     .likebutton:hover{
         opacity: 1;
-        color: black;
+    
     }
 
     .likebutton-fade{
        opacity: 0;
        transition: opacity .25s ease-in-out;
-       -moz-transition: opacity .25s ease-in-out;
-       -webkit-transition: opacity .25s ease-in-out;
+
     }
 
 

@@ -7,11 +7,10 @@
 // var parent = btn.parent('form');
 // parent.attr('action', '/like?product_id=' + <%= @product.id %>);
 
-var btn = $(".unlike-action[data-product-id='" + <%= @product.id %> + "']");
-console.log(btn)
+var btn = $(".liked[data-product-id='" + <%= @product.id %> + "']");
 btn.attr('href', '/like?product_id=' + <%= @product.id %>);
-btn.removeClass('unlike-action');
-btn.addClass('like-action');
+btn.removeClass('liked');
+btn.addClass('unliked');
 
 var likeCount = $(".like-quantity[data-product-id='" + <%= @product.id %> + "']");
-likeCount.html('<%= @product.likes.count %>');
+likeCount.html("+" + '<%= @product.likes.count %>');
