@@ -36,17 +36,13 @@ a:hover, a:active { text-decoration: none; color:$grey }
 .navbar-default .navbar-brand{
     font: $fancy-font;
     text-transform: uppercase;
-    position: absolute;
     text-align: center;
+    margin: 0 auto;
 }
 
 .navbar-collapse.collapse{
     width: 100%;
-}
-
-.navbar-brand.hidden-xs {
-    width: 50%;
-    margin: 0;
+    text-align: center;
 }
 
 .navbar-brand-xs{
@@ -73,6 +69,13 @@ a:hover, a:active { text-decoration: none; color:$grey }
     background-color: rgba(255, 255, 255, 0.95);
 }
 
+.centered-brand {
+    float:none;
+    display: inline-block;
+    width: 50%;
+    margin: 0;
+}
+
 .welcome-text{
     font-size: 30px;
     text-align: center;
@@ -80,7 +83,7 @@ a:hover, a:active { text-decoration: none; color:$grey }
     margin-top: 100px;
     color: darken($lightgrey, 70%);
 }
- 
+
 .instagram-wrap {
     background: $lightgrey;
     padding-top: $padding*2
