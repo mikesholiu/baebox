@@ -7,11 +7,27 @@
 
 <section>
 
-<!--   <div class = "img-container">
-      <%= image_tag @product.image, class: "img-responsive" %>
-  </div> -->
-  <div class = "container"> 
-    <div class = "main-container">
+  <div class="container-fluid border">
+    <div class = "row product-container border">
+      <div class = "col-md-4 col-md-offset-2">
+          <%= image_tag @product.image, class: "img-responsive product-image center-block" %>
+      </div>
+      <div class = "col-md-4">
+          <div class = "product-description-text"><%= @product.description %></div>
+          <div class = "by-text">By @<%= link_to @product.handle, "http://instagram.com/#{@product.handle}/", :target => '_blank'%></div>
+          <div class = "price-text">Buy it for <%= number_to_currency(@product.price, :precision =>0) %></div>
+
+          <div class = "like-list">
+          Liked by:
+            <div class = "names">
+              <% @product.likes.each do |liker| %>
+                <div class = "names"><%= User.find(liker.user_id).name %>
+                </div>
+              <% end %>
+            </div>
+          </div>
+
+      </div>
     </div>
   </div>
 
