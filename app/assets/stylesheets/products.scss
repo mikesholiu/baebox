@@ -1,17 +1,23 @@
-// Place all the styles related to the products controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-.box{
-  padding: 100px;
+/*.outer-container{
+  height: 100px;
+  text-align: center;
 }
 
-.img-container {
-  border: dashed blue 1px;
-  height: 500px;
+.img-container .img-responsive {
+  display: inline-block;
+  width: auto;
+  max-height: 500px;
 }
 
-.img-container product-image {
-  max-height: 100%;
-  max-width: 100%;
+.main-container{ 
+  height: 600px;
+  width: 1000px;
+  border-style: solid;
+  border-color: red;
+  display: inline-block;
+  margin-top: 100px;
 }
+
+.container{
+  text-align: center;
+}*/
