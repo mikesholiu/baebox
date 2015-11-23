@@ -26,17 +26,19 @@
     
     <div id="navbar" class="navbar-collapse collapse">
         <div class="navbar-brand centered-brand hidden-xs">
-          <div class ="brand">BaeBox</div> 
+          <div class ="brand"><%= link_to "BaeBox", root_path %></div> 
         </div>
 
         <ul class="nav navbar-nav">
-          <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "Submit", {controller: "submissions", action: "new"} %></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categories <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="#">Apparel</a></li>
-              <li><a href="#">Accessories</a></li>
-              <li><a href="#">Tech</a></li>
+              <% Product.category_types.each do |cat| %>
+                <li>
+                  <%= link_to cat, root_path(category: cat) %>
+                </li>
+              <% end %>
             </ul>
           </li>
         </ul>

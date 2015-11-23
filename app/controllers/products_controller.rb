@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
-  before_filter :authorize_admin, only: :index
+  before_filter :authorize_admin, only: [:index, :new]
   respond_to :html, :json
+  
   def index
     @products = Product.all
   end
@@ -32,7 +33,7 @@ class ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:image, :price, :name, :handle, :description, :featured)
+    params.require(:product).permit(:image, :price, :name, :handle, :description, :featured, :category)
   end
 
 end

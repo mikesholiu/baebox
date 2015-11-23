@@ -1,0 +1,12 @@
+<div class = "box">
+<%= simple_form_for @product do |f| %>
+  <%= f.input :handle %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.input :image %>
+  <%= f.input :price %>
+  
+  <%= f.check_box :featured %> Featured
+  <div><%= f.button :submit %></div>
+<% end %>
+</div>

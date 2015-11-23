@@ -9,7 +9,9 @@ Rails.application.routes.draw do
 
   get 'products/index' => 'products#index'
   get 'products/new' => 'products#new'
-  
+
+  get 'submissions/new' => 'submissions#new'
+
   match 'like', to: 'likes#like', via: :post
   match 'unlike', to: 'likes#unlike', via: :post
 
