@@ -1,12 +1,19 @@
-<div class = "box">
-<%= simple_form_for @product do |f| %>
-  <%= f.input :handle %>
-  <%= f.input :name %>
-  <%= f.input :description %>
-  <%= f.input :image %>
-  <%= f.input :price %>
-  
-  <%= f.check_box :featured %> Featured
-  <div><%= f.button :submit %></div>
-<% end %>
-</div>
+<div class = "container">
+  <div class = "submit-form-container">
+    <div class = "box">
+      <div class="input-group input-group-lg">
+        
+        <span class="input-group-addon" id="basic-addon1">@</span>
+        <input type="text" class="form-control" id="handle-search-text" placeholder="Enter handle" aria-describedby="basic-addon1">
+        
+        <span class="input-group-btn">
+          <button class="btn btn-default" id="find-images-button" type="button">Find Images</button>
+        </span>
+      
+      </div>
+    </div>
+    <div class = "box" id="search-images-section">
+      <%= image_tag("image.png", id: "product-image-1") %>
+    </div>
+  </div>
+</div

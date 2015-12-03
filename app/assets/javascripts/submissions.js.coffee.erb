@@ -1,0 +1,18 @@
+$(document).on "page:change", ->
+  $('#find-images-button').click ->
+    $('#search-images-section').toggle()
+    handle = $('#handle-search-text')
+    $('#product-image-1').attr 'src', handle.val()
+    requesturl = "https://api.instagram.com/v1/users/search?q=mikesholiu&client_id=<%=ENV["instagram_client_id"]%>"
+    $.ajax
+      url: requesturl
+      type: "get"
+      dataType: "jsonp"
+      cache: false
+      success: (data) ->
+        userid = data.data.id
+        alert userid
+
+
+    #how to use variable in place of 'mikesholiu'
+    #how to make the request work?

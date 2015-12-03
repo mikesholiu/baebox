@@ -1,3 +1,17 @@
-// Place all the styles related to the Submissions controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.submit-form-container{
+  margin: 10px;
+  margin-top: 100px;
+}
+
+#find-images-button{
+  color: grey;
+  font-size: 12pt;
+}
+
+#handle-search-text{
+  font-size: 12pt;
+}
+
+#search-images-section{
+  display: none;
+}
