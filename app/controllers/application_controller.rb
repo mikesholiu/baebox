@@ -4,6 +4,12 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   #before_filter :require_user
 
+  helper_method :get_access_token
+
+  def get_access_token
+    session[:access_token]
+  end
+
 
   private
 

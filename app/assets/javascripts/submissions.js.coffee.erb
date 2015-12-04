@@ -1,18 +1,31 @@
 $(document).on "page:change", ->
-  $('#find-images-button').click ->
+  $('#submit-form').on 'submit', (evt) ->
+    evt.preventDefault()
     $('#search-images-section').toggle()
     handle = $('#handle-search-text')
-    $('#product-image-1').attr 'src', handle.val()
-    requesturl = "https://api.instagram.com/v1/users/search?q=mikesholiu&client_id=<%=ENV["instagram_client_id"]%>"
+    accessToken = $('#hidden-access').val()
+    profile_request_url = "https://api.instagram.com/v1/users/search?q=" + 
+      handle.val() + "&access_token=" + accessToken
+    console.log accessToken
+    
     $.ajax
-      url: requesturl
+      url: profile_request_url
       type: "get"
       dataType: "jsonp"
       cache: false
       success: (data) ->
-        userid = data.data.id
-        alert userid
-
-
-    #how to use variable in place of 'mikesholiu'
-    #how to make the request work?
+        console.log data
+        current_handle_id = data.data[0].id
+        console.log current_handle_id
+        recent_media_request_url = "https://api.instagram.com/v1/users/" + current_handle_id + "/media/recent/?access_token=" + accessToken
+        $.ajax
+          url: recent_media_request_url
+          type: "get"
+          dataType: "jsonp"
+          cache: false
+          success: (data) ->
+            console.log data
+            for n in [1...5] by 1
+              s = "#{n}"
+              product_pic = data.data[n].images.low_resolution.url
+              $('#product-image-' + s).attr 'src', product_pic

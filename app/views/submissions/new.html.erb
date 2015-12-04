@@ -1,19 +1,23 @@
 <div class = "container">
-  <div class = "submit-form-container">
+  <form class = "submit-form-container" id="submit-form">
     <div class = "box">
       <div class="input-group input-group-lg">
         
         <span class="input-group-addon" id="basic-addon1">@</span>
         <input type="text" class="form-control" id="handle-search-text" placeholder="Enter handle" aria-describedby="basic-addon1">
-        
+        <input type="hidden" id="hidden-access" value="<%= get_access_token %>"/>
         <span class="input-group-btn">
-          <button class="btn btn-default" id="find-images-button" type="button">Find Images</button>
+          <input type="submit" class="btn btn-default" data-something="some value" id="find-images-button" value="Find Images"/>
         </span>
       
       </div>
     </div>
-    <div class = "box" id="search-images-section">
-      <%= image_tag("image.png", id: "product-image-1") %>
+    <div class = "image-select-option-container" id="search-images-section">
+      
+      <% (1..5).each do |i| %>
+        <%= image_tag("image.png", id: "product-image-" + i.to_s) %>
+      <% end %>
+
     </div>
-  </div>
+  </form>
 </div
