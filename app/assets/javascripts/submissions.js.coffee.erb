@@ -25,7 +25,7 @@ $(document).on "page:change", ->
           cache: false
           success: (data) ->
             console.log data
-            for n in [1...5] by 1
+            for n in [0...6]
               s = "#{n}"
               product_pic = data.data[n].images.low_resolution.url
               $('#product-image-' + s).attr 'src', product_pic

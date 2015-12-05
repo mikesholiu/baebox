@@ -12,12 +12,14 @@
       
       </div>
     </div>
-    <div class = "image-select-option-container" id="search-images-section">
-      
-      <% (1..5).each do |i| %>
-        <%= image_tag("image.png", id: "product-image-" + i.to_s) %>
-      <% end %>
+    <div class = "container">
+      <div class = "image-select-option-container" id="search-images-section">
+        
+        <% (0..5).each do |i| %>
+          <%= image_tag("image.png", id: "product-image-" + i.to_s) %>
+        <% end %>
 
+      </div>
     </div>
   </form>
 </div
