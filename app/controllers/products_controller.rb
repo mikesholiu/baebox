@@ -8,6 +8,8 @@ class ProductsController < ApplicationController
 
   def new
     @product = Product.new
+    @product.image = params[:url]
+    @product.handle = params[:handle]
   end
 
   def create

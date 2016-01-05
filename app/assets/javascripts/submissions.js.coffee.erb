@@ -28,4 +28,9 @@ $(document).on "page:change", ->
             for n in [0...6]
               s = "#{n}"
               product_pic = data.data[n].images.low_resolution.url
-              $('#product-image-' + s).attr 'src', product_pic
+              handle = data.data[n].user.username
+              $img = $('#product-image-' + s) 
+              $img.attr 'src', product_pic
+              $linkParent = $img.parent()
+              currentLink = $linkParent.attr 'href' 
+              $linkParent.attr 'href', currentLink + "?url=" + encodeURIComponent(product_pic) + "&handle=" + handle
