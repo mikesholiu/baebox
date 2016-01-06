@@ -7,8 +7,8 @@ Rails.application.routes.draw do
   
   get 'welcome/admin' => 'welcome#admin'
 
-  get 'products/index' => 'products#index'
-  get 'products/new' => 'products#new'
+  # get 'products/index' => 'products#index'
+  # get 'products/new' => 'products#new'
 
   get 'submissions/new' => 'submissions#new'
 
