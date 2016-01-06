@@ -15,5 +15,6 @@ Rails.application.routes.draw do
   match 'like', to: 'likes#like', via: :post
   match 'unlike', to: 'likes#unlike', via: :post
 
+  resources :products
 
 end
